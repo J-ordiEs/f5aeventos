@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class RoutesTest extends TestCase
 {
     /**
      * A basic test example.
@@ -23,11 +23,18 @@ class ExampleTest extends TestCase
         $response = $this->get('/login');
 
         $response->assertStatus(200);
-    } 
-    
+    }
+
     public function testRouteRegister()
     {
         $response = $this->get('/register');
+
+        $response->assertStatus(200);
+    }
+
+     public function testRouteEvents()
+    {
+        $response = $this->get('/events');
 
         $response->assertStatus(200);
     }
