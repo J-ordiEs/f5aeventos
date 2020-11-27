@@ -7,13 +7,23 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class EventsTest extends TestCase
-{    public function testCreateEvent()
+{  
+
+        public function testDatabase()
     {
-        //creacion de eventos db
-        
-        //imprimir eventos en view
-        //class -> all -> return event
+        // Make call to application...
 
-
+        $this->assertDatabaseHas('events', [
+            'id' => 'fjsdjfiosdjfoisdjfoisdjf',
+            'date' => '2020-11-16 09:36:19',
+            'title' => 'Css',
+            'speaker' => 'steve jobs',
+            'image' => 'imagen',
+            'description' => 'css is cool',
+            'capacity' => 20,
+            'requirements' => 'mic',
+            'special' => false,
+            'past' => false
+        ]);
     }
 }
