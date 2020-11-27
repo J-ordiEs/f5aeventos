@@ -2,8 +2,7 @@
 
 namespace Tests\Feature\Http\Controllers\Auth;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+use App\Models\User;
 use Tests\TestCase;
 
 class LoginControllerTest extends TestCase
@@ -25,8 +24,17 @@ class LoginControllerTest extends TestCase
         // when
         $response = $this->get(route('login'));
         // then
-        $response->assertStatus(200);
+        $response->assertSuccessful();
         $response->assertViewIs('auth.login');
+    }
+
+    public function test_login_isnt_displayed_when_authenticated()
+    {
+        $user = User::factory()->make(); 
+
+        $response = $this->actingAs($user)->get(route('login'));
+        $response = $this->get(route('login'));
+        $response->assertRedirect('home');
     }
 
     public function test_login_displays_validation_errors()
@@ -36,5 +44,7 @@ class LoginControllerTest extends TestCase
         // then
         $response->assertStatus(302);
         $response->assertSessionHasErrors('email');
+        $response->assertSessionHasErrors('password');
+
     }
 }
