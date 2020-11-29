@@ -32,11 +32,5 @@ class RoutesTest extends TestCase
         $response->assertStatus(200);
     }
 
-     public function testRouteEvents()
-    {
-        $response = $this->get('/events');
-
-        $response->assertStatus(200);
-    }
 
 }

@@ -8,13 +8,19 @@ use Tests\TestCase;
 
 class EventsTest extends TestCase
 {  
+    public function testRouteEvents()
+    {
+        $response = $this->get('/events');
+
+        $response->assertStatus(200);
+    }
 
         public function testDatabase()
     {
         // Make call to application...
 
         $this->assertDatabaseHas('events', [
-            'id' => 'fjsdjfiosdjfoisdjfoisdjf',
+            'id' => 1,
             'date' => '2020-11-16 09:36:19',
             'title' => 'Css',
             'speaker' => 'steve jobs',
