@@ -25,7 +25,7 @@ class EventsController extends Controller
             'capacity' => 'required',
             'requirements' => 'required',
             'zoom' => 'required',
-            'special' => 'required'
+           
         ]);
 
         Event::create([

@@ -144,12 +144,6 @@
                         </label>
 
                         <input id="special" type="checkbox" >
-
-                        @error('special')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
-                        </p>
-                        @enderror
                     </div>
                     <div class="flex flex-wrap">
                         <div class="text-center inline-flex">
