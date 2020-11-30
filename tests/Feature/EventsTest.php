@@ -22,6 +22,7 @@ class EventsTest extends TestCase
         $this->assertDatabaseHas('events', [
             'id' => 1,
             'date' => '2020-11-16 09:36:19',
+            'time'=> '00:00:00',
             'title' => 'Css',
             'speaker' => 'steve jobs',
             'image' => 'imagen',

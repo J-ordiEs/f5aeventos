@@ -13,9 +13,10 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {            
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('date');
+            $table->date('date');
+            $table->time('time');
             $table->string('title');
             $table->string('speaker');
             $table->string('image');
@@ -25,6 +26,7 @@ class CreateEventsTable extends Migration
             $table->boolean('special');
             $table->boolean('past');
             $table->timestamps();
+
         });
     }
 
