@@ -5,6 +5,8 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Models\Event;
+use App\Database\Factories;
 
 class EventsTest extends TestCase
 {  
@@ -33,5 +35,11 @@ class EventsTest extends TestCase
             'special' => false,
             'past' => false
         ]);
+    }
+
+    public function testCreateEvent()
+    {
+        $events = Event::factory(2)->create();
+        $this->assertCount(2, $events);
     }
 }
