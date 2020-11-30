@@ -23,10 +23,10 @@ class CreateEventsTable extends Migration
             $table->string('description');
             $table->integer('capacity');
             $table->string('requirements');
+            $table->string('zoom');
             $table->boolean('special');
             $table->boolean('past');
             $table->timestamps();
-
         });
     }
 
