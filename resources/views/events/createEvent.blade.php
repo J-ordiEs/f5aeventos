@@ -150,10 +150,10 @@
                             <button type="submit" class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-blue-200 hover:bg-blue-700 sm:py-4">
                                 {{ __('Create') }}
                             </button>
-                            <button class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg--200 hover:bg-green-700 sm:py-4">
+                            <button class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-red-200 hover:bg-red-700 sm:py-4">
                                 {{ __('Cancel') }}
                             </button>
-                            <button class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-yellow-200 hover:bg-yellow-700 sm:py-4">
+                            <button class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-yellow-200 hover:bg-yellow-300 sm:py-4">
                                 {{ __('Edit') }}
                             </button>   
                         </div>
