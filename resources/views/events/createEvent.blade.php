@@ -19,7 +19,7 @@
                             {{ __('Date') }}:
                         </label>
 
-                        <input id="date" type="date" class="form-input w-full @error('date')  border-red-500 @enderror" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
+                        <input id="date" type="date" class="form-input w-full  shadow @error('date')  border-red-500 @enderror" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
 
                         @error('date')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -33,7 +33,7 @@
                             {{ __('Time') }}:
                         </label>
 
-                        <input id="time" type="time" class="form-input w-full @error('time') border-red-500 @enderror" name="time" value="{{ old('time') }}" required autocomplete="time">
+                        <input id="time" type="time" class="form-input w-full shadow @error('time') border-red-500 @enderror" name="time" value="{{ old('time') }}" required autocomplete="time">
 
                         @error('time')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -47,7 +47,7 @@
                             {{ __('Title') }}:
                         </label>
 
-                        <input id="title" type="text" class="form-input w-full @error('title') border-red-500 @enderror" name="title" required autocomplete="title">
+                        <input id="title" type="text" class="form-input w-full shadow  @error('title') border-red-500 @enderror" name="title" required autocomplete="title">
 
                         @error('title')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -61,7 +61,7 @@
                             {{ __('Speaker') }}:
                         </label>
 
-                        <input id="speaker" type="text" class="form-input w-full @error('speaker') border-red-500 @enderror" name="speaker" required autocomplete="speaker">
+                        <input id="speaker" type="text" class="form-input w-full shadow @error('speaker') border-red-500 @enderror" name="speaker" required autocomplete="speaker">
 
                         @error('speaker')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -74,7 +74,7 @@
                             {{ __('Image') }}:
                         </label>
 
-                        <input id="image" type="text" class="form-input w-full @error('image') border-red-500 @enderror" name="image" required autocomplete="image">
+                        <input id="image" type="text" class="form-input w-full shadow  @error('image') border-red-500 @enderror" name="image" required autocomplete="image">
 
                         @error('image')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -88,7 +88,7 @@
                             {{ __('Description') }}:
                         </label>
 
-                        <input id="description" type="text" class="form-input w-full @error('description') border-red-500 @enderror" name="description" required autocomplete="description">
+                        <input id="description" type="text" class="form-input w-full shadow  @error('description') border-red-500 @enderror" name="description" required autocomplete="description">
 
                         @error('description')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -102,7 +102,7 @@
                             {{ __('Capacity') }}:
                         </label>
 
-                        <input id="capacity" type="number" min=1 class="form-input w-full @error('capacity') border-red-500 @enderror" name="capacity" required autocomplete="capacity">
+                        <input id="capacity" type="number" min=1 class="form-input w-full shadow  @error('capacity') border-red-500 @enderror" name="capacity" required autocomplete="capacity">
 
                         @error('capacity')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -116,7 +116,7 @@
                             {{ __('Requirements') }}:
                         </label>
 
-                        <input id="requirements" type="text" class="form-input w-full @error('requirements') border-red-500 @enderror" name="requirements" required autocomplete="requirements">
+                        <input id="requirements" type="text" class="form-input w-full shadow  @error('requirements') border-red-500 @enderror" name="requirements" required autocomplete="requirements">
 
                         @error('requirements')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -130,7 +130,7 @@
                             {{ __('Zoom') }}:
                         </label>
 
-                        <input id="zoom" type="text" class="form-input w-full @error('zoom') border-red-500 @enderror" name="zoom" required autocomplete="zoom">
+                        <input id="zoom" type="text" class="form-input w-full shadow  @error('zoom') border-red-500 @enderror" name="zoom" required autocomplete="zoom">
 
                         @error('zoom')
                         <p class="text-red-500 text-xs italic mt-4">
