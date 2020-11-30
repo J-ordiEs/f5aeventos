@@ -14,13 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('events.events');
 });
 Route::get('/events', function () {
     return view('events.events');
 });
+
+Route::get('/createEvent', function () {
+    return view('events.createEvent');
+});
 Auth::routes();
 
 Route::get('/events', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');
+Route::post('/createEvent', [\App\Http\Controllers\EventsController::class, 'store'])->name('events.store');
 
 

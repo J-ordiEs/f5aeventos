@@ -11,6 +11,36 @@ class EventsController extends Controller
     {
         $events = Event::all();
         return view('events.events', compact('events'));
+    }
 
+    public function store(Request $request)
+    {
+        $request->validate([
+            'date'     => 'required',
+            'time'    => 'required',
+            'title' => 'required',
+            'speaker' => 'required',
+            'image' => 'required',
+            'description' => 'required',
+            'capacity' => 'required',
+            'requirements' => 'required',
+            'zoom' => 'required',
+            'special' => 'required'
+        ]);
+
+        Event::create([
+            'date' => $request->date,
+            'time' => $request->time,
+            'title' => $request->title,
+            'speaker' => $request->speaker,
+            'image' => $request->image,
+            'description' => $request->description,
+            'capacity' => $request->capacity,
+            'requirements' => $request->requirements,
+            'zoom' => $request->zoom,
+            'special' => $request->special,
+        ]);
+
+        return back();
     }
 }
