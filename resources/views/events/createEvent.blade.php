@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
 
-<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
+<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10"> 
     <div class="flex">
         <div class="w-full">
             <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
-                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
+                <header class="font-semibold bg-green-100 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
                     {{ __('New Event') }}
                 </header>
 
@@ -140,20 +140,20 @@
                     </div>
                     <div class="flex flex-wrap">
                         <label for="special" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('Special') }}:
+                            {{ __('Special ') }}  : 
                         </label>
 
                         <input id="special" type="checkbox" >
                     </div>
                     <div class="flex flex-wrap">
                         <div class="text-center inline-flex">
-                            <button type="submit" class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
+                            <button type="submit" class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-blue-200 hover:bg-blue-700 sm:py-4">
                                 {{ __('Create') }}
                             </button>
-                            <button class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-green-500 hover:bg-blue-700 sm:py-4">
+                            <button class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg--200 hover:bg-green-700 sm:py-4">
                                 {{ __('Cancel') }}
                             </button>
-                            <button class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-yellow-500 hover:bg-blue-700 sm:py-4">
+                            <button class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-yellow-200 hover:bg-yellow-700 sm:py-4">
                                 {{ __('Edit') }}
                             </button>   
                         </div>
@@ -162,6 +162,6 @@
 
             </section>
         </div>
-    </div>
-</main>
-@endsection
+    </div> 
+</main> 
+ @endsection 
