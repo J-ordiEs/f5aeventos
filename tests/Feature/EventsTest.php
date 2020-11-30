@@ -13,7 +13,7 @@ class EventsTest extends TestCase
     use RefreshDatabase;
     public function testRouteEvents()
     {
-        $response = $this->get('/events');
+        $response = $this->get(route('events'));
 
         $response->assertStatus(200);
     }
@@ -21,7 +21,7 @@ class EventsTest extends TestCase
 
     public function testReturnEventView()
     {
-        $response = $this->get('/events');
+        $response = $this->get(route('events'));
         $response->assertViewIs('events.events');
     }
     public function testCreateEvent()

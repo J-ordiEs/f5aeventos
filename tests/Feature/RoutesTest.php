@@ -14,7 +14,7 @@ class RoutesTest extends TestCase
      */
     public function testRouteHome()
     {
-        $response = $this->get('/');
+        $response = $this->get(route('events'));
 
         $response->assertStatus(200);
     }
