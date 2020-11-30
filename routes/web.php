@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/events', function () {
     return view('events.events');
 });
+
+// Route::get('/events', function () {
+//     return view('events.events');
+// });
+
 Auth::routes();
 
-Route::get('/events', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');
-
-
+Route::get('/', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');

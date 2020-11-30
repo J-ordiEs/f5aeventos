@@ -10,7 +10,7 @@ use App\Models\Event;
 
 class EventsTest extends TestCase
 {
-    use RefreshDatabase;
+    // use RefreshDatabase;
     public function testRouteEvents()
     {
         $response = $this->get(route('events'));
