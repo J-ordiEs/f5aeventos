@@ -6,10 +6,11 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Event;
-use App\Database\Factories;
+
 
 class EventsTest extends TestCase
 {
+    use RefreshDatabase;
     public function testRouteEvents()
     {
         $response = $this->get('/events');
@@ -34,6 +35,15 @@ class EventsTest extends TestCase
         $events = Event::all();
         $response = $this->get(route('events'));
         $response->assertViewHas('events', $events);
+    }
+
+    public function testReturnCanSeeEventsInView()
+    {
+        Event::factory(2)->create();
+        $events = Event::all();
+        $response = $this->get(route('events'));
+        $response->assertSee($events[0]->title);
+
     }
 
 }
