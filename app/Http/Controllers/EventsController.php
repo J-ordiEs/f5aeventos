@@ -15,10 +15,7 @@ class EventsController extends Controller
 
     public function indexEvent(Event $event)
     {
-        
-        return view('events.infoEvent', [
-            'event' => $event
-            ]);
+        return view('events.infoEvent', compact('event'));
     }
 
     public function store(Request $request)
