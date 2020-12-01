@@ -9,7 +9,7 @@ use App\Models\Event;
 
 class CreateTest extends TestCase
 {
-    //use RefreshDatabase;
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -49,7 +49,7 @@ class CreateTest extends TestCase
         $response = $this->post('/createEvent', $data);
 
         $this->assertDatabaseHas('events', $data);
-        $response->assertRedirect('/events');
+        $response->assertRedirect(route('events'));
 
     }
 

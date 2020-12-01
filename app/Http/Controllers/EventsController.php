@@ -43,4 +43,9 @@ class EventsController extends Controller
 
         return redirect(route('events'));
     }
+
+    public function update(Event $event)
+    {
+        # code...
+    }
 }
