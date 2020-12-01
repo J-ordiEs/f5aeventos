@@ -46,6 +46,29 @@ class EventsController extends Controller
 
     public function update(Event $event)
     {
-        # code...
+        $data = request()->validate([
+            'date' => '',
+            'time' => '',
+            'title' => '',
+            'speaker' => '',
+            'image' => '',
+            'description' => '',
+            'capacity' => '',
+            'requirements' => '',
+            'zoom' => '',
+            'special' => '',
+        ]);
+        
+        $event->update($data);
+        return back();
+
+    }
+
+    public function delete(Event $event)
+    {
+       
+        $event->delete();
+        return redirect(route('events'));
+
     }
 }

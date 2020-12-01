@@ -18,9 +18,9 @@ class editTest extends TestCase
     public function testUpdateEvents()
     {
         $event= Event::factory(1)->create();
-        // dd($event);
         $event->title = 'Maria';
-        $this->put("/events". $event[0]->id, $event->toArray());
+        $data = $event->toArray();
+        $this->put("/events". $event[0]->id, $data);
 
         $this->assertDatabaseHas('events', [
             'id' => 1,
