@@ -1,14 +1,14 @@
 @extends('layouts.app') 
 @section('content')
-<main class="flex flex-col items-center justify-center">
+<main class="flex flex-col items-center justify-center md:flex-row flex-wrap gap-5">
     @foreach ($events as $event)
-    <article class="justify-center text-center py-5 w-10/12">
-        <header class="flex-none bg-black text-white">
+    <article class="justify-center text-center my-5 h-72 w-5/12">
+        <header class="h-1/5 bg-black text-white">
             <h3>{{ $event->title }}</h3>
             <h4>{{ $event->time }}</h4>
         </header>
-        <figure class="text-white">
-            <img src="https://picsum.photos/300" alt="Event thumbnail" class="">
+        <figure class="h-4/5 text-white">
+            <img src="https://picsum.photos/500" alt="Event thumbnail" class="">
             <figcaption class="bg-black bg-opacity-75">{{ $event->capacity }}</figcaption>
         </figure>
     </article>

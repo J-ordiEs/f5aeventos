@@ -49,7 +49,7 @@ class CreateTest extends TestCase
         $response = $this->post('/createEvent', $data);
 
         $this->assertDatabaseHas('events', $data);
-        $response->assertRedirect('/events');
+        $response->assertRedirect(route('events'));
 
     }
 

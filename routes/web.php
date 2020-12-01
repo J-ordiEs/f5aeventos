@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('events.events');
 });
-Route::get('/events', function () {
-    return view('events.events');
-});
 
 Route::get('/createEvent', function () {
     return view('events.createEvent');
@@ -26,8 +23,9 @@ Route::get('/createEvent', function () {
 Route::get('/editEvent', function () {
     return view('events.editEvent');
 });
+
 Auth::routes();
 
-Route::get('/events', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');
+Route::get('/', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');
 Route::post('/createEvent', [\App\Http\Controllers\EventsController::class, 'store'])->name('events.store');
 
