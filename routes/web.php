@@ -31,4 +31,3 @@ Auth::routes();
 Route::get('/events', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');
 Route::post('/createEvent', [\App\Http\Controllers\EventsController::class, 'store'])->name('events.store');
 
-
