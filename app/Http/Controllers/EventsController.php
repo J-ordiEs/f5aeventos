@@ -13,6 +13,14 @@ class EventsController extends Controller
         return view('events.events', compact('events'));
     }
 
+    public function indexEvent(Event $event)
+    {
+        
+        return view('events.infoEvent', [
+            'event' => $event
+            ]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([

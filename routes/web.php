@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('events.events');
 });
 
+Route::get('/event/{id}', function ($id) {
+    return $id;
+});
+
 Route::get('/createEvent', function () {
     return view('events.createEvent');
 });
@@ -27,5 +31,6 @@ Route::get('/editEvent', function () {
 Auth::routes();
 
 Route::get('/', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');
+Route::get('/event/{id}', [\App\Http\Controllers\EventsController::class, 'indexEvent'])->name('events.event');
 Route::post('/createEvent', [\App\Http\Controllers\EventsController::class, 'store'])->name('events.store');
 
