@@ -41,6 +41,6 @@ class EventsController extends Controller
             'special' => $request->special,
         ]);
 
-        return redirect('/events');
+        return redirect(route('events'));
     }
 }
