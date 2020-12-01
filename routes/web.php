@@ -23,6 +23,9 @@ Route::get('/events', function () {
 Route::get('/createEvent', function () {
     return view('events.createEvent');
 });
+Route::get('/editEvent', function () {
+    return view('events.editEvent');
+});
 Auth::routes();
 
 Route::get('/events', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');

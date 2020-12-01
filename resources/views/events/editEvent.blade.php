@@ -8,7 +8,7 @@
             <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
                 <header class="font-semibold bg-green-100 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                    {{ __('New Event') }}
+                    {{ __('Edit Event') }}
                 </header>
 
                 <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST" action="{{ route('events.store') }}">
@@ -147,12 +147,12 @@
                     </div>
                     <div class="flex flex-wrap">
                         <div class="text-center inline-flex">
-                            <button type="submit" class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-blue-200 hover:bg-blue-700 sm:py-4">
-                                {{ __('Create') }}
-                            </button>
-                            <button class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-red-200 hover:bg-red-700 sm:py-4">
+                            <button type="submit" class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-red-200 hover:bg-red-700 sm:py-4">
                                 {{ __('Cancel') }}
-                            </button>  
+                            </button>
+                            <button class="w-full select-none font-bold whitespace-no-wrap p-4 rounded-lg text-base leading-normal no-underline text-black-100 bg-yellow-200 hover:bg-yellow-300 sm:py-4">
+                                {{ __('Edit') }}
+                            </button>   
                         </div>
                     </div>
                 </form>
