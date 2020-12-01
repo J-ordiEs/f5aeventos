@@ -35,4 +35,5 @@ Route::get('/', [\App\Http\Controllers\EventsController::class, 'index'])->name(
 Route::get('/event/{id}', [\App\Http\Controllers\EventsController::class, 'indexEvent'])->name('events.event');
 Route::post('/createEvent', [\App\Http\Controllers\EventsController::class, 'store'])->name('events.store');
 Route::put('/events/{$id}', [\App\Http\Controllers\EventsController::class, 'update'])->name('events.update');
+Route::delete('/events/{$id}', [\App\Http\Controllers\EventsController::class, 'delete'])->name('events.delete');
 
