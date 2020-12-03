@@ -12,6 +12,7 @@ class RoutesTest extends TestCase
      *
      * @return void
      */
+    use RefreshDatabase;
     public function testRouteHome()
     {
         $response = $this->get(route('events'));
