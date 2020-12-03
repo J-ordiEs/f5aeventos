@@ -12,8 +12,10 @@ class EventsTest extends TestCase
 {
     use RefreshDatabase;
     public function testRouteEvents()
+
     {
-        $response = $this->get(route('events'));
+        $this->withoutExceptionHandling();
+        $response = $this->get('/');
 
         $response->assertStatus(200);
     }

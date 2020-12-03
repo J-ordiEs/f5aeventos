@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use App\Models\Event;
+use App\Models\User;
 
 class CreateTest extends TestCase
 {
@@ -28,10 +28,10 @@ class CreateTest extends TestCase
         $response->assertViewIs('events.createEvent');
     }
 
-    public function testAdminCanCreateEvent()
+    public function testCanCreateEvent()
     {
-        // $event= Event::factory(1)->create();
-        // $data = [...$event];
+        $this->actingAs(User::factory()->create());
+        
         $data = [
             "special" => false,
             "past" => false,

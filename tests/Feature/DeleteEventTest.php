@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Event;
+use App\Models\User;
 
 class DeleteEventTest extends TestCase
 {
@@ -15,15 +16,18 @@ class DeleteEventTest extends TestCase
      * @return void
      */
     use RefreshDatabase;
-    public function testDeleteEvent()
+    public function testUserCanDeleteEvent()
     {
-        $event= Event::factory(1)->create();
+        
+        $this->actingAs(User::factory()->create());
 
-        $response = $this->delete('/events'. $event[0]->id);
+        $eventToDelete = Event::factory()->create();   
 
-        $this->assertCount(0, Event::all());
 
-        $response->assertRedirect('events');
+        $this->delete('/events/' . $eventToDelete->id);
+        
+
+        $this->assertDatabaseCount('events', 0);
 
         
     }
