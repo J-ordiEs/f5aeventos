@@ -13,8 +13,9 @@ class EventsController extends Controller
         return view('events.events', compact('events'));
     }
 
-    public function indexEvent(Event $event)
+    public function indexEvent($id)
     {
+        $event = Event::find($id);
         return view('events.infoEvent', compact('event'));
     }
 
@@ -87,6 +88,5 @@ class EventsController extends Controller
         $event = Event::find($id);
         $event->delete();
         return redirect(route('events'));
-
     }
 }

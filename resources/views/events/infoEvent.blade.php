@@ -20,7 +20,5 @@
         </figcaption>
         <button>Eliminar</button>
         <button>Editar</button>
-        <button>Archivar</button>
     </figure>
-<p>foo</p>
 @stop
