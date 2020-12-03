@@ -49,23 +49,36 @@ class EventsController extends Controller
         return redirect(route('events'));
     }
 
-    public function update(Event $event)
+    public function update(Request $request, $id)
     {
-        $data = request()->validate([
-            'date' => '',
-            'time' => '',
-            'title' => '',
-            'speaker' => '',
-            'image' => '',
-            'description' => '',
-            'capacity' => '',
-            'requirements' => '',
-            'zoom' => '',
-            'special' => '',
+        $event = Event::find($id);
+        $request->validate([
+            'date'     => 'required',
+            'time'    => 'required',
+            'title' => 'required',
+            'speaker' => 'required',
+            'image' => 'required',
+            'description' => 'required',
+            'capacity' => 'required',
+            'requirements' => 'required',
+            'zoom' => 'required',
+           
         ]);
-        
-        $event->update($data);
-        return back();
+
+        $event->update([
+            'date' => $request->date,
+            'time' => $request->time,
+            'title' => $request->title,
+            'speaker' => $request->speaker,
+            'image' => $request->image,
+            'description' => $request->description,
+            'capacity' => $request->capacity,
+            'requirements' => $request->requirements,
+            'zoom' => $request->zoom,
+            'special' => $request->special,
+        ]);
+
+        return redirect(route('events'));
 
     }
 

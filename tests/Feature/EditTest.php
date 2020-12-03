@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Models\User;
 use App\Models\Event;
 
 class editTest extends TestCase
@@ -15,15 +16,19 @@ class editTest extends TestCase
      *
      * @return void
      */
-    public function testUpdateEvents()
+    public function testUserCanUpdateEvents()
     {
+        $this->actingAs(User::factory()->create());
+
         $event= Event::factory(1)->create();
-        $event->title = 'Maria';
-        $data = $event->toArray();
-        $this->put("/events". $event[0]->id, $data);
+        $event[0]->title = 'Maria';
+        
+        $data = $event[0]->toArray();
+       
+        $this->put('/events/'. $event[0]->id, $data);
+    
 
         $this->assertDatabaseHas('events', [
-            'id' => 1,
             'title' => 'Maria'
         ]);
     }

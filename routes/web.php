@@ -36,6 +36,6 @@ Auth::routes();
 Route::get('/', [\App\Http\Controllers\EventsController::class, 'index'])->name('events');
 Route::get('/events/{id}', [\App\Http\Controllers\EventsController::class, 'indexEvent'])->name('events.event');
 Route::post('/createEvent', [\App\Http\Controllers\EventsController::class, 'store'])->name('events.store')->middleware('auth');
-Route::put('/events/{id}', [\App\Http\Controllers\EventsController::class, 'update'])->name('events.update');
+Route::put('/events/{id}', [\App\Http\Controllers\EventsController::class, 'update'])->name('events.update')->middleware('auth');
 Route::delete('/events/{id}', [\App\Http\Controllers\EventsController::class, 'destroy'])->name('events.delete')->middleware('auth');
 
