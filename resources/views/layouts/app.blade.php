@@ -52,7 +52,20 @@
                 </nav>
             </div>
         </header>
+<<<<<<< HEAD
         <main>
+=======
+         <section id="inicio">
+            <div class="mr-0 ">
+                <img src={{ asset('img/f5events.jpeg') }} class="md:w-full ">
+                <h1 class="z-1"> f5@Events </h1>
+            </div>
+            <div class="boton">
+                <a href="">LEARN MORE</a>
+            </div>
+        </section> 
+                    
+>>>>>>> 4163415ffba5346dbfa658f5d15865d1d4135a83
             @yield('content')
         </main>
     </div>
