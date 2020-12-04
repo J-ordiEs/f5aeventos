@@ -14,4 +14,4 @@
     </article></a>
     @endforeach
 </main>
-@endsection
+@stop
