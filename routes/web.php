@@ -25,11 +25,11 @@ Route::get('/event/{id}', function ($id) {
 
 Route::get('/createEvent', function () {
     return view('events.createEvent');
-});
+})->middleware('auth');
 
 Route::get('/editEvent', function () {
     return view('events.editEvent');
-});
+})->middleware('auth');
 
 Auth::routes();
 

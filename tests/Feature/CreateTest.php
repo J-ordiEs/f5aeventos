@@ -17,12 +17,14 @@ class CreateTest extends TestCase
      */
     public function testRoute()
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->get('/createEvent');
 
         $response->assertStatus(200);
     }
     public function testReturnView()
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->get('/createEvent');
 
         $response->assertViewIs('events.createEvent');
