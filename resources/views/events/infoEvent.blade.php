@@ -21,4 +21,4 @@
         <button>Eliminar</button>
         <button>Editar</button>
     </figure>
-@stop
+@endsection
