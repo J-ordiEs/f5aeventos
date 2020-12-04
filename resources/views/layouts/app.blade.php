@@ -53,6 +53,16 @@
                 </nav>
             </div>
         </header>
+         <section id="inicio">
+            <div class"bienvenida">
+                <img src={{ asset('img/events.jpeg') }}>
+                <h1> f5@Events </h1>
+            </div>
+            <div class="boton">
+                <a href="">LEARN MORE</a>
+            </div>
+        </section> 
+                    
             @yield('content')
     </div>
 </body>
